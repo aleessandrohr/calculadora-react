@@ -2,8 +2,8 @@ body {
     background-color: rgba(228, 228, 228, 0.651);
 }
 
-.background {
+.App {
     position: relative;
     text-align: center;
-    top: 200px;
+    top: 100px;
 }
