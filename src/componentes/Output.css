@@ -1,13 +1,5 @@
-.principal {
+.num {
     position: relative;
     top: -20px;
-    left: 135px;
-}
-
-.num {
     font-size: 50px;
-}
-
-.total {
-    font-size: 30px;
 }

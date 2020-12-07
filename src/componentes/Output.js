@@ -8,10 +8,6 @@ class Output extends Component {
                 <div className='num'>
                    {this.props.num} 
                 </div>
-                <br/>
-                <div className='total'>
-                    {this.props.total}
-                </div> 
             </div>
         );
     }
