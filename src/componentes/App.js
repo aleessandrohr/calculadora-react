@@ -8,48 +8,115 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      num: 0,
-      total: 0,
+      display: 0,
+      first: null,
+      last: null,
       operação: null,
     }
   }
 
   Set = (value) => {
-    var número = this.state.num
-    var totalnum = this.state.total
-    var oper = this.state.operação
-    if (value === 'AC') {
-      this.setState({num: 0, total: 0, operação: null})
-    }
     if (value >= 0 || value <= 9) {
-      if (número === 0 || número === oper) {
-        this.setState({num: null})
-        this.setState({num: value, total: value})
+      if (this.state.operação === null) {
+        let valor = null
+        let firststate = this.state.first
+        if (this.state.first === null) {
+          valor = value
+        }
+        else {
+          valor = firststate += value
+        }
+        this.setState({first: valor, display: valor})
+      }
+      else {
+        let valor = null
+        let laststate = this.state.last
+        if (this.state.last === null) {
+          valor = value
+        }
+        else {
+          valor = laststate += value
+        }
+        this.setState({last: valor, display: valor})
+      }
+    }
+    else if (value === '+' || value === '-' || value === '*' || value === '/') {
+      this.setState({operação: value, display: value})
+    }
+    else if (value === '=') {
+      this.Resultado()
+    } 
+    else if (value === 'AC') {
+      this.AC()
+    }
+    else if (value === '.') {
+      if (this.state.last == null) {
+        let firststate = this.state.first
+        let valor = firststate += '.'
+        this.setState({first: valor, display: valor})
       } else {
-        this.setState({num: número += value, total: totalnum += value})
+        let laststate = this.state.last
+        let valor = laststate += '.'
+        this.setState({last: valor, display: valor})
       }
-      if (oper === '+') {
-        this.setState({total: Number(totalnum) + Number(value), operação: null})
-      } else if (oper === '-') {
-        this.setState({total: Number(totalnum) - Number(value), operação: null})
-      } else if (oper === '*') {
-        this.setState({total: Number(totalnum) * Number(value), operação: null})
-      } else if (oper === '/') {
-        this.setState({total: Number(totalnum) / Number(value), operação: null})
-      }
-    } else if (value === '+' || value === '-' || value === '*' || value === '/') {
-      this.setState({operação: value, num: value})
-    } else if (value === '=') {
-      this.setState({num: totalnum, operação: 'AC'})
-    } else if (value === '+/-' || value === '%' || value === '.') {
+    }
+    else if (value === '+/-' || value === '%') {
       alert('Função em desenvolvimento.')
     }
+  }
+
+  Resultado = () => {
+    if (this.state.first !== null) {
+      if (this.state.operação === '+') {
+      this.Somar()
+      }
+      else if (this.state.operação === '-') {
+        this.Subtrair()
+      }
+      else if (this.state.operação === '*') {
+        this.Multiplicar()
+      }
+      else if (this.state.operação === '/') {
+        this.Dividir()
+      }
+    }
+    else {
+      if (this.state.operação === '+' || this.state.operação === '-') {
+        this.setState({display: this.state.last, first: this.state.last, last: null, operação: null})
+      } else {
+        this.AC()
+      }
+    }
+  }
+
+  AC = () => {
+    this.setState({display: 0, first: null, last: null, operação: null})
+  }
+
+  Somar = () => {
+    let total = Number(parseFloat(this.state.first)) + Number(parseFloat(this.state.last))
+    this.setState({first: total, last: null, display: total})
+  }
+
+  Subtrair = () => {
+    let total = Number(parseFloat(this.state.first)) - Number(parseFloat(this.state.last))
+    this.setState({first: total, last: null, display: total})
+  }
+
+  Multiplicar = () => {
+    let total = Number(parseFloat(this.state.first)) * Number(parseFloat(this.state.last))
+    this.setState({first: total, last: null, display: total})
+  }
+
+  Dividir = () => {
+    let total = Number(parseFloat(this.state.first)) / Number(parseFloat(this.state.last))
+    this.setState({first: total, last: null, display: total})
   }
 
   render() {
     return(
       <div className='App'>
-        <Output num={this.state.num}/>
+        <Output display={this.state.display}/>
         <Buttons Método={this.Set}/>
       </div>
     )
