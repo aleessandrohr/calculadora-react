@@ -12,12 +12,12 @@
     width: 80px;
     height: 80px;
     font-size: 40px;
-    border-radius: 30px;
+    border-radius: 20px;
     border-width: 0;
     outline: 0;
     cursor: pointer;
-    color: rgba(36, 32, 32, 0.801);
-    background-color: rgba(230, 219, 219, 0.733);
+    color: white;
+    background-color: rgba(55, 79, 185, 0.733);
 }
 
 .bt .zero {
@@ -28,8 +28,8 @@
     border-width: 0;
     outline: 0;
     cursor: pointer;
-    color: rgba(36, 32, 32, 0.801);
-    background-color: rgba(230, 219, 219, 0.733);
+    color: white;
+    background-color: rgba(55, 79, 185, 0.733);
 }
 
 .bt .dividir {
@@ -65,7 +65,7 @@
     outline: 0;
     cursor: pointer;
     color: white;
-    background-color: rgba(66, 93, 209, 0.829);
+    background-color: rgb(233, 221, 57);
 }
 
 .bt .somar {

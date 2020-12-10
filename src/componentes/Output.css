@@ -1,5 +1,11 @@
 .display {
     position: relative;
-    top: -20px;
-    font-size: 50px;
+    top: 15px;
+    margin: auto;
+    width: 340px;
+    height: 68px;
+    font-size: 60px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(255, 184, 52);
 }

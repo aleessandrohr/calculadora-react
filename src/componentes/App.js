@@ -78,9 +78,12 @@ class App extends Component {
 
   render() {
     return(
-      <div className='App'>
-        <Output display={this.state.display}/>
-        <Buttons Método={this.Set}/>
+      <div className='Calculadora'>
+        <h1>Calculadora</h1>
+        <div className='App'>
+          <Output display={this.state.display}/>
+          <Buttons Método={this.Set} display={this.state.display}/>
+        </div>
       </div>
     )
   }
