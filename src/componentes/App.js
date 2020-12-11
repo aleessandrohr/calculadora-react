@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {
       first: '0',
       last: '0',
-      total: null,
+      total: '0',
       operação: null,
       display: 0,
     }
@@ -30,7 +30,7 @@ class App extends Component {
         else {
           valor = firststate += value
         }
-        this.setState({first: valor, display: valor})
+        this.setState({first: valor, display: valor, total: '0'})
       }
       else {
         let valor = null
@@ -53,24 +53,24 @@ class App extends Component {
         else if (this.state.operação === '/') {
           this.setState({total: Number(this.state.first) / Number(valor)})
         }
-        this.setState({last: valor, display: valor})
+        this.setState({last: valor, display: `${this.state.first} ${this.state.operação} ${valor}`})
       }
     }
     else {
       if (value === '=') {
-        this.setState({first: this.state.total, last: '0', total: null, display: this.state.total})
+        this.setState({first: '0', last: '0', display: 0, operação: null})
       }
       else if (value === 'AC') {
-        this.setState({first: '0', last: '0', total: null, operação: null, display: 0})
+        this.setState({first: '0', last: '0', total: '0', operação: null, display: 0})
       }
       else if (value === '.' || value === '+/-' || value === '%') {
         alert('Função em desenvolvimento!')
       }
       else {
         if (this.state.last === '0') {
-          this.setState({operação: value, display: value})
+          this.setState({operação: value, display: `${this.state.first} ${value}`})
         } else {
-          this.setState({first: this.state.total, last: '0', total: null, operação: value, display: value})
+          this.setState({first: this.state.total, last: '0', operação: value, display: `${this.state.total} ${value}`})
         }
       }
     }
@@ -78,12 +78,9 @@ class App extends Component {
 
   render() {
     return(
-      <div className='Calculadora'>
-        <h1>Calculadora</h1>
-        <div className='App'>
-          <Output display={this.state.display}/>
-          <Buttons Método={this.Set} display={this.state.display}/>
-        </div>
+      <div className='App'>
+        <Output display={this.state.display} displaytotal={this.state.total}/>
+        <Buttons Set={this.Set}/>
       </div>
     )
   }

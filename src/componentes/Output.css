@@ -1,11 +1,13 @@
 .display {
-    position: relative;
-    top: 15px;
-    margin: auto;
-    width: 340px;
-    height: 68px;
-    font-size: 60px;
-    border-radius: 10px;
-    color: white;
-    background-color: rgb(255, 184, 52);
+    padding: 30px 30px 0;
+}
+
+.display input {
+    width: 100%;
+    background-color: rgb(238, 238, 238);
+    text-align: right;
+    border-width: 0;
+    outline: 0;
+    font-size: 50px;
+    padding: 5px;
 }

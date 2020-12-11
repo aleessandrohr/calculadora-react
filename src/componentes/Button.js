@@ -8,8 +8,7 @@ class Button extends Component {
         return(
             <div className={this.props.classe}>
                 <div>
-                   <button 
-                   className={this.props.classebt} onClick={() => this.props.Método(this.props.value)}>{this.props.value}</button>
+                   <button className={this.props.tipo} onClick={() => this.props.Set(this.props.value)}>{this.props.value}</button>
                 </div>
             </div>
         )

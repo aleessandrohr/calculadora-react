@@ -6,7 +6,8 @@ class Output extends Component {
         return (
             <div>
                 <div className='display'>
-                   {this.props.display} 
+                    <input type="text" readOnly value={this.props.display}/>
+                    <input type="text" readOnly value={this.props.displaytotal}/>
                 </div>
             </div>
         );

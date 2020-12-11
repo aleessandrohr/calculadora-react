@@ -4,130 +4,130 @@ import './Buttons.css'
 
 class Buttons extends Component {
 
-    Método = (value) => {
-        this.props.Método(value)
+    Set = (value) => {
+        this.props.Set(value)
     }
-
+    
     render() {
         return (
             <div className='Buttons'>
                 <Button
                 classe={'bt'}
-                classebt={'number'}
-                Método={this.Método}
+                tipo={'number'}
                 value={'AC'}
+                Set={this.Set}
                 />
                 <Button
                 classe={'bt'}
-                classebt={'number'}
+                tipo={'number'}
                 value={'+/-'}
-                Método={this.Método}
+                Set={this.Set}
                 />
                 <Button
                 classe={'bt'}
-                classebt={'number'}
+                tipo={'number'}
                 value={'%'}
-                Método={this.Método}
+                Set={this.Set}
                 />
                 <Button
                 classe={'bt'}
-                classebt={'dividir'}
+                tipo={'dividir'}
                 value={'/'}
-                Método={this.Método}
+                Set={this.Set}
                 />
                 <br/>
                 <Button
                 classe={'bt'}
-                classebt={'number'}
-                value={'9'}
-                Método={this.Método}
-                />
-                <Button
-                classe={'bt'}
-                classebt={'number'}
-                value={'8'}
-                Método={this.Método}
-                />
-                <Button
-                classe={'bt'}
-                classebt={'number'}
+                tipo={'number'}
                 value={'7'}
-                Método={this.Método}
+                Set={this.Set}
                 />
                 <Button
                 classe={'bt'}
-                classebt={'multiplicar'}
+                tipo={'number'}
+                value={'8'}
+                Set={this.Set}
+                />
+                <Button
+                classe={'bt'}
+                tipo={'number'}
+                value={'9'}
+                Set={this.Set}
+                />
+                <Button
+                classe={'bt'}
+                tipo={'multiplicar'}
                 value={'*'}
-                Método={this.Método}
+                Set={this.Set}
                 />
                 <br/>
                 <Button
                 classe={'bt'}
-                classebt={'number'}
-                value={'6'}
-                Método={this.Método}
-                />
-                <Button
-                classe={'bt'}
-                classebt={'number'}
-                value={'5'}
-                Método={this.Método}
-                />
-                <Button
-                classe={'bt'}
-                classebt={'number'}
+                tipo={'number'}
                 value={'4'}
-                Método={this.Método}
+                Set={this.Set}
                 />
                 <Button
                 classe={'bt'}
-                classebt={'subtrair'}
+                tipo={'number'}
+                value={'5'}
+                Set={this.Set}
+                />
+                <Button
+                classe={'bt'}
+                tipo={'number'}
+                value={'6'}
+                Set={this.Set}
+                />
+                <Button
+                classe={'bt'}
+                tipo={'subtrair'}
                 value={'-'}
-                Método={this.Método}
+                Set={this.Set}
                 />
                 <br/>
                 <Button
                 classe={'bt'}
-                classebt={'number'}
-                value={'3'}
-                Método={this.Método}
-                />
-                <Button
-                classe={'bt'}
-                classebt={'number'}
-                value={'2'}
-                Método={this.Método}
-                />
-                <Button
-                classe={'bt'}
-                classebt={'number'}
+                tipo={'number'}
                 value={'1'}
-                Método={this.Método}
+                Set={this.Set}
                 />
                 <Button
                 classe={'bt'}
-                classebt={'somar'}
+                tipo={'number'}
+                value={'2'}
+                Set={this.Set}
+                />
+                <Button
+                classe={'bt'}
+                tipo={'number'}
+                value={'3'}
+                Set={this.Set}
+                />
+                <Button
+                classe={'bt'}
+                tipo={'somar'}
                 value={'+'}
-                Método={this.Método}
+                Set={this.Set}
                 />
                 <br/>
                 <Button
                 classe={'bt'}
-                classebt={'zero'}
+                tipo={'zero'}
                 value={'0'}
-                Método={this.Método}
+                Set={this.Set}
                 />
                 <Button
                 classe={'bt'}
-                classebt={'number'}
+                tipo={'number'}
                 value={'.'}
-                Método={this.Método}
+                Set={this.Set}
                 />
                 <Button
                 classe={'bt'}
-                classebt={'resultado'}
+                tipo={'resultado'}
                 value={'='}
-                Método={this.Método}
+                Set={this.Set}
                 />
             </div>
         );

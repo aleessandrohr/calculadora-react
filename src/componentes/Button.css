@@ -4,90 +4,88 @@
 }
 
 .bt {
-    display: inline-flex;
+    display: inline-block;
     padding: 5px;
 }
 
 .bt .number {
+    background-color:rgb(230, 230, 230);
     width: 80px;
     height: 80px;
     font-size: 40px;
-    border-radius: 20px;
+    border-radius: 50px;
     border-width: 0;
     outline: 0;
     cursor: pointer;
-    color: white;
-    background-color: rgba(55, 79, 185, 0.733);
 }
 
 .bt .zero {
+    background-color:rgb(230, 230, 230);
     width: 172px;
     height: 80px;
     font-size: 40px;
-    border-radius: 30px;
+    border-radius: 50px;
     border-width: 0;
     outline: 0;
     cursor: pointer;
-    color: white;
-    background-color: rgba(55, 79, 185, 0.733);
 }
 
 .bt .dividir {
+    background-color: rgb(245, 50, 50);
+    color: white;
     width: 80px;
     height: 80px;
     font-size: 40px;
-    border-radius: 30px;
+    border-radius: 50px;
     border-width: 0;
     outline: 0;
     cursor: pointer;
-    color: white;
-    background-color: rgba(226, 73, 35, 0.863);
 }
 
 .bt .multiplicar {
+    background-color: rgb(65, 255, 47);
+    color: white;
     width: 80px;
     height: 80px;
     font-size: 40px;
-    border-radius: 30px;
+    border-radius: 50px;
     border-width: 0;
     outline: 0;
     cursor: pointer;
-    color: white;
-    background-color: rgba(199, 73, 167, 0.884);
 }
 
 .bt .subtrair {
+    background-color: rgb(255, 251, 32);
+    color: white;
     width: 80px;
     height: 80px;
     font-size: 40px;
-    border-radius: 30px;
+    border-radius: 50px;
     border-width: 0;
     outline: 0;
     cursor: pointer;
-    color: white;
-    background-color: rgb(233, 221, 57);
 }
 
 .bt .somar {
+    background-color: rgb(14, 255, 235);
+    color: white;
     width: 80px;
     height: 80px;
     font-size: 40px;
-    border-radius: 30px;
+    border-radius: 50px;
     border-width: 0;
     outline: 0;
     cursor: pointer;
-    color: white;
-    background-color: rgba(93, 206, 48, 0.925);
 }
 
 .bt .resultado {
+    background-color: rgb(255, 16, 215);
+    color: white;
     width: 80px;
     height: 80px;
     font-size: 40px;
-    border-radius: 30px;
+    border-radius: 50px;
     border-width: 0;
     outline: 0;
     cursor: pointer;
-    color: white;
-    background-color: rgba(44, 188, 207, 0.829);
 }
