@@ -60,7 +60,9 @@ class App extends Component {
     }
     else {
       if (value === '=') {
-        this.setState({first: this.state.total, last: '0', display: this.state.total, operação: null})
+        if (this.state.total !== null) {
+          this.setState({first: this.state.total, last: '0', display: this.state.total, operação: null})
+        }
       }
       else if (value === 'AC') {
         this.setState({first: '0', last: '0', total: null, operação: null, display: 0})
