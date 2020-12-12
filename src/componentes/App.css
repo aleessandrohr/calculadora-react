@@ -1,4 +1,12 @@
+.body {
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	min-height: 100vh;
+  	min-width: 100vh;
+}
+
 .App {
-    background-color: rgb(238, 238, 238);
-    width: 400px;
+  	background-color: rgb(238, 238, 238);
+  	width: 400px;
 }
