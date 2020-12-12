@@ -1,8 +1,8 @@
 # Calculadora
 
-Uma calculadora feita com React.
+Uma calculadora feita usando ReactJS.
 
-## Acesse
+## `Acesse`
 
-Para acessar a calculadora é fácil, apenas clique [aqui](https://alessandrohenriqueramos.github.io/calculadora-react/build/) e pronto.
+Para acessar a calculadora é fácil, apenas clique [aqui](https://alessandrohenriqueramos.github.io/calculadora-react/build/).
 
