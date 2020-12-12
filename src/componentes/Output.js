@@ -5,7 +5,7 @@ class Output extends Component {
     render() {
         return (
             <div className='output'>
-                <input type="text" readOnly value={this.props.display}/>
+                <input type="text" style={this.props.dark} readOnly value={this.props.display}/>
             </div>
         );
     }

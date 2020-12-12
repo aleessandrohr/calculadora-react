@@ -13,7 +13,12 @@ class App extends Component {
       total: null,
       operação: null,
       display: 0,
+      darkMode: false,
     }
+  }
+
+  setTema = (tema) => {
+    this.setState({darkMode: tema})
   }
 
   Set = (value) => {
@@ -92,14 +97,38 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div className='body'>
-        <div className='App'>
-          <Output display={this.state.display}/>
-          <Buttons Set={this.Set} />
+
+    let darkmodeBody = {
+      backgroundColor: this.state.darkMode ? 'black' : 'white',
+    }
+
+    let darkmode = {
+      backgroundColor: this.state.darkMode ? 'rgb(17, 17, 17)' : 'rgb(238, 238, 238)',
+      color: this.state.darkMode ? 'white' : 'black',
+    }
+
+    if (this.state.darkMode === false) {
+      return (
+        <div className='body'>
+          <div style={darkmode} className='App'>
+            <i className="fas fa-moon" style={darkmode} id='tema' onClick={() => this.setTema(true)}></i>
+            <Output display={this.state.display} dark={darkmode}/>
+            <Buttons Set={this.Set}/>
+          </div>
         </div>
-      </div>
-    );
+      ); 
+    }
+    else {
+      return (
+        <div style={darkmodeBody} className='body'>
+          <div style={darkmode} className='App'>
+            <i className="fas fa-moon" style={darkmode} id='tema' onClick={() => this.setTema(false)}></i>
+            <Output display={this.state.display} dark={darkmode}/>
+            <Buttons Set={this.Set} dark={this.state.darkMode}/>
+          </div>
+        </div>
+      ); 
+    }
   }
 }
 
