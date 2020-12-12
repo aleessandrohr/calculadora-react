@@ -1,134 +1,33 @@
 import React, { Component } from 'react';
-import Button from './Button';
-import './Buttons.css'
+import './Buttons.css';
 
 class Buttons extends Component {
-
-    Set = (value) => {
-        this.props.Set(value)
-    }
-    
     render() {
         return (
-            <div className='Buttons'>
-                <Button
-                classe={'bt'}
-                tipo={'number'}
-                value={'AC'}
-                Set={this.Set}
-                />
-                <Button
-                classe={'bt'}
-                tipo={'number'}
-                value={'+/-'}
-                Set={this.Set}
-                />
-                <Button
-                classe={'bt'}
-                tipo={'number'}
-                value={'%'}
-                Set={this.Set}
-                />
-                <Button
-                classe={'bt'}
-                tipo={'dividir'}
-                value={'/'}
-                Set={this.Set}
-                />
+            <div className='bt'>
+                <button className='operação' onClick={() => this.props.Set('AC')}>AC</button>
+                <button className='operação' onClick={() => this.props.Set('+/-')}>+/-</button>
+                <button className='operação' onClick={() => this.props.Set('%')}>%</button>
+                <button className='dividir' onClick={() => this.props.Set('/')}>/</button>
                 <br/>
-                <Button
-                classe={'bt'}
-                tipo={'number'}
-                value={'7'}
-                Set={this.Set}
-                />
-                <Button
-                classe={'bt'}
-                tipo={'number'}
-                value={'8'}
-                Set={this.Set}
-                />
-                <Button
-                classe={'bt'}
-                tipo={'number'}
-                value={'9'}
-                Set={this.Set}
-                />
-                <Button
-                classe={'bt'}
-                tipo={'multiplicar'}
-                value={'*'}
-                Set={this.Set}
-                />
+                <button className='number' onClick={() => this.props.Set('7')}>7</button>
+                <button className='number' onClick={() => this.props.Set('8')}>8</button>
+                <button className='number' onClick={() => this.props.Set('9')}>9</button>
+                <button className='multiplicar' onClick={() => this.props.Set('*')}>*</button>
                 <br/>
-                <Button
-                classe={'bt'}
-                tipo={'number'}
-                value={'4'}
-                Set={this.Set}
-                />
-                <Button
-                classe={'bt'}
-                tipo={'number'}
-                value={'5'}
-                Set={this.Set}
-                />
-                <Button
-                classe={'bt'}
-                tipo={'number'}
-                value={'6'}
-                Set={this.Set}
-                />
-                <Button
-                classe={'bt'}
-                tipo={'subtrair'}
-                value={'-'}
-                Set={this.Set}
-                />
+                <button className='number' onClick={() => this.props.Set('4')}>4</button>
+                <button className='number' onClick={() => this.props.Set('5')}>5</button>
+                <button className='number' onClick={() => this.props.Set('6')}>6</button>
+                <button className='subtrair' onClick={() => this.props.Set('-')}>-</button>
                 <br/>
-                <Button
-                classe={'bt'}
-                tipo={'number'}
-                value={'1'}
-                Set={this.Set}
-                />
-                <Button
-                classe={'bt'}
-                tipo={'number'}
-                value={'2'}
-                Set={this.Set}
-                />
-                <Button
-                classe={'bt'}
-                tipo={'number'}
-                value={'3'}
-                Set={this.Set}
-                />
-                <Button
-                classe={'bt'}
-                tipo={'somar'}
-                value={'+'}
-                Set={this.Set}
-                />
+                <button className='number' onClick={() => this.props.Set('1')}>1</button>
+                <button className='number' onClick={() => this.props.Set('2')}>2</button>
+                <button className='number' onClick={() => this.props.Set('3')}>3</button>
+                <button className='somar' onClick={() => this.props.Set('+')}>+</button>
                 <br/>
-                <Button
-                classe={'bt'}
-                tipo={'zero'}
-                value={'0'}
-                Set={this.Set}
-                />
-                <Button
-                classe={'bt'}
-                tipo={'number'}
-                value={'.'}
-                Set={this.Set}
-                />
-                <Button
-                classe={'bt'}
-                tipo={'resultado'}
-                value={'='}
-                Set={this.Set}
-                />
+                <button className='zero' onClick={() => this.props.Set('0')}>0</button>
+                <button className='operação' onClick={() => this.props.Set('.')}>.</button>
+                <button className='resultado' onClick={() => this.props.Set('=')}>=</button>
             </div>
         );
     }

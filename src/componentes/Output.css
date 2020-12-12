@@ -1,13 +1,13 @@
-.display {
-    padding: 30px 30px 0;
+.output {
+    padding: 50px 50px 0;
+    text-align: center;
 }
 
-.display input {
+.output input {
     width: 100%;
     background-color: rgb(238, 238, 238);
     text-align: right;
     border-width: 0;
     outline: 0;
     font-size: 50px;
-    padding: 5px;
 }

@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-import './Output.css';
+import './Output.css'
 
 class Output extends Component {
     render() {
         return (
-            <div>
-                <div className='display'>
-                    <input type="text" readOnly value={this.props.display}/>
-                    <input type="text" readOnly value={this.props.displaytotal}/>
-                </div>
+            <div className='output'>
+                <input type="text" readOnly value={this.props.display}/>
             </div>
         );
     }
