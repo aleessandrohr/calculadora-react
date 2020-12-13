@@ -4,42 +4,16 @@
 }
 
 .bt button {
-    width: 80px;
-    height: 80px;
-    font-size: 40px;
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
     border-radius: 50px;
     border-width: 0;
     outline: 0;
     cursor: pointer;
-    margin: 5px;
+    margin: 10px;
 }
 
 .bt .zero {
-    width: 170px;
-}
-
-
-.bt .dividir {
-    background-color: rgb(245, 50, 50);
-    color: white;
-}
-
-.bt .multiplicar {
-    background-color: rgb(65, 255, 47);
-    color: white;
-}
-
-.bt .subtrair {
-    background-color: rgb(255, 251, 32);
-    color: white;
-}
-
-.bt .somar {
-    background-color: rgb(14, 255, 235);
-    color: white;
-}
-
-.bt .resultado {
-    background-color: rgb(255, 16, 215);
-    color: white;
+    width: 160px;
 }

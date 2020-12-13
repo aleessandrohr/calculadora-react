@@ -61,7 +61,7 @@ class App extends Component {
     else {
       if (value === '=') {
         if (this.state.total !== null) {
-          this.setState({first: this.state.total, last: '0', display: this.state.total, operação: null})
+          this.setState({first: '0', last: '0', display: this.state.total, operação: null})
         }
       }
       else if (value === 'AC') {
@@ -105,7 +105,7 @@ class App extends Component {
     }
 
     let darkmode = {
-      backgroundColor: this.state.darkMode ? 'rgb(17, 17, 17)' : 'rgb(238, 238, 238)',
+      backgroundColor: this.state.darkMode ? 'rgb(20, 20, 20)' : 'rgb(230, 230, 230)',
       color: this.state.darkMode ? 'white' : 'black',
     }
 

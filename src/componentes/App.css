@@ -20,7 +20,8 @@ body {
 
 #tema {
     position: relative;
-    top: 25px;
-    left: 25px;
+    top: 30px;
+    left: 30px;
     cursor: pointer;
+    font-size: 20px;
 }
