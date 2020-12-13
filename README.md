@@ -4,7 +4,7 @@
 
 <p align="center">
     <img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="license"/>
-    <img src="https://img.shields.io/badge/version-1.2-blue" alt="versão">
+    <img src="https://img.shields.io/badge/version-1.3-blue" alt="versão">
 </p>
 
 Calculadora simples desenvolvida em React.
@@ -13,7 +13,7 @@ Calculadora simples desenvolvida em React.
 
 Para acessar a calculadora é fácil, apenas clique [aqui](https://calculadorareact.vercel.app/).
 
-<img src="https://media.giphy.com/media/AHj0lQstZ9I9W/giphy.gif" alt="gif" height="150px" ></a>
+<img src="https://media.giphy.com/media/AHj0lQstZ9I9W/giphy.gif" alt="gif" height="150px" >
 
 ## Obtendo o código
 
@@ -35,6 +35,7 @@ npm install
 ```
 npm start
 ```
+
 ## Espere abrir este URL no seu navegador:
 ```
 http://localhost:3000
@@ -42,5 +43,4 @@ http://localhost:3000
 
 Pronto xD
 
-<img src="https://media.giphy.com/media/AFdcYElkoNAUE/giphy.gif" alt="gif" height="150px" ></a>
-
+<img src="https://media.giphy.com/media/AFdcYElkoNAUE/giphy.gif" alt="gif" height="150px" >
