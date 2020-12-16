@@ -3,12 +3,10 @@ import './Buttons.css';
 
 class Buttons extends Component {
     render() {
-
         let darkmode = {
             backgroundColor: this.props.dark ? 'rgb(28, 28, 28)' : 'rgb(238, 238, 238)',
             color: this.props.dark ? 'white' : 'black',
-          }
-
+        }
         return (
             <div className='bt'>
                 <button style={darkmode} className='operação' onClick={() => this.props.Set('AC')}>AC</button>
@@ -19,7 +17,7 @@ class Buttons extends Component {
                 <button style={darkmode} className='number' onClick={() => this.props.Set('7')}>7</button>
                 <button style={darkmode} className='number' onClick={() => this.props.Set('8')}>8</button>
                 <button style={darkmode} className='number' onClick={() => this.props.Set('9')}>9</button>
-                <button style={darkmode} className='multiplicar' onClick={() => this.props.Set('*')}>*</button>
+                <button style={darkmode} className='multiplicar' onClick={() => this.props.Set('X')}>X</button>
                 <br/>
                 <button style={darkmode} className='number' onClick={() => this.props.Set('4')}>4</button>
                 <button style={darkmode} className='number' onClick={() => this.props.Set('5')}>5</button>

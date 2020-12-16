@@ -12,8 +12,8 @@ class App extends Component {
       last: '0',
       total: null,
       operação: null,
-      display: 0,
       darkMode: false,
+      display: 0,
     }
   }
 
@@ -23,9 +23,9 @@ class App extends Component {
 
   Set = (value) => {
     if (value >= 0 || value <= 9) {
-      if (this.state.operação === null) {
+      if (this.state.operação === null || this.state.operação === '=') {
         let valor = null
-        if (this.state.first === '0') {
+        if (this.state.first === '0' || this.state.operação === '=') {
           valor = value
         }
         else {
@@ -49,7 +49,7 @@ class App extends Component {
         else if (this.state.operação === '-') {
           this.setState({total: Number(this.state.first) - Number(valor)})
         }
-        else if (this.state.operação === '*') {
+        else if (this.state.operação === 'X') {
           this.setState({total: Number(this.state.first) * Number(valor)})
         }
         else if (this.state.operação === '/') {
@@ -61,19 +61,19 @@ class App extends Component {
     else {
       if (value === '=') {
         if (this.state.total !== null) {
-          this.setState({first: '0', last: '0', display: this.state.total, operação: null})
+          this.setState({first: String(this.state.total), last: '0', total: null, display: this.state.total, operação: '='})
         }
       }
       else if (value === 'AC') {
         this.setState({first: '0', last: '0', total: null, operação: null, display: 0})
       }
       else if (value === '.' ) {
-        if (this.state.operação === null) {
+        if (this.state.operação === null || this.state.operação === '=') {
           if (this.state.first.includes(value) === false) {
             let valor = null
             let firststate = this.state.first
             valor = firststate += value
-            this.setState({first: valor, display: valor})
+            this.setState({first: valor, display: valor, operação: null})
           }
         }
         else {
@@ -100,37 +100,26 @@ class App extends Component {
 
   render() {
 
-    let darkmodeBody = {
-      backgroundColor: this.state.darkMode ? 'black' : 'white',
-    }
+      let darkmodeBody = {
+        backgroundColor: this.state.darkMode ? 'black' : 'white',
+      }
 
-    let darkmode = {
-      backgroundColor: this.state.darkMode ? 'rgb(20, 20, 20)' : 'rgb(230, 230, 230)',
-      color: this.state.darkMode ? 'white' : 'black',
-    }
+      let darkmode = {
+        backgroundColor: this.state.darkMode ? 'rgb(20, 20, 20)' : 'rgb(230, 230, 230)',
+        color: this.state.darkMode ? 'white' : 'black',
+      }
 
-    if (this.state.darkMode === false) {
-      return (
-        <div className='body'>
-          <div style={darkmode} className='App'>
-            <i className="fas fa-moon" style={darkmode} id='tema' onClick={() => this.setTema(true)}></i>
-            <Output display={this.state.display} dark={darkmode}/>
-            <Buttons Set={this.Set}/>
-          </div>
-        </div>
-      ); 
-    }
-    else {
       return (
         <div style={darkmodeBody} className='body'>
           <div style={darkmode} className='App'>
-            <i className="fas fa-moon" style={darkmode} id='tema' onClick={() => this.setTema(false)}></i>
+            {this.state.darkMode ? 
+            <i className="fas fa-moon" id='tema' onClick={() => this.setTema(false)}></i> : 
+            <i className="fas fa-moon" id='tema' onClick={() => this.setTema(true)}></i>}
             <Output display={this.state.display} dark={darkmode}/>
             <Buttons Set={this.Set} dark={this.state.darkMode}/>
           </div>
         </div>
       ); 
-    }
   }
 }
 
