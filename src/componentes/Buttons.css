@@ -17,3 +17,30 @@
 .bt .zero {
     width: 160px;
 }
+
+@media (max-width: 500px) {
+
+    .bt button {
+        width: 18%;
+        height: 65px;
+    }
+
+    .bt .zero {
+        width: 43%;
+    }
+
+}
+
+@media (max-width: 300px) {
+
+    .bt button {
+        width: 16%;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    .bt .zero {
+        width: 40%;
+    }
+
+}
