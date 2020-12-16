@@ -1,19 +1,45 @@
 <p align="center">
-    <img src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Calculator-2-icon.png" alt="icon" height="180">
+    <img src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Calculator-2-icon.png" alt="icon" height="150px">
 </p>
 
 <p align="center">
     <img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="license"/>
-    <img src="https://img.shields.io/badge/version-1.3-blue" alt="versão">
+    <img src="https://img.shields.io/badge/version-1.4-blue" alt="versão">
 </p>
 
-Calculadora simples desenvolvida em React.
+# Calculadora simples desenvolvida em React.
+
+---
 
 ## Acesse
 
 Para acessar a calculadora é fácil, apenas clique [aqui](https://calculadorareact.vercel.app/).
 
 <img src="https://media.giphy.com/media/AHj0lQstZ9I9W/giphy.gif" alt="gif" height="150px" >
+
+---
+
+## Tecnologias utilizadas
+
+Para o desenvolvimento desta aplicação foi utilizado as seguintes tecnologias:
+
+* Visual Studio Code (Editor de código);
+* HTML5;
+* CSS3;
+* JavaScript; 
+* React;
+
+---
+
+## Ajustes e melhorias
+
+A aplicação teve as seguintes mudanças:
+
+* Otimização do código;
+* Melhorado responsividade;
+* Melhorado funções da aplicação;
+
+---
 
 ## Obtendo o código
 
