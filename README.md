@@ -49,7 +49,7 @@ Com essas aplicações instaladas, abra o cmd ou o powershell (dependendo do sis
 
 ## Execute
 ```
-git clone https://github.com/alessandrohenriqueramos/calculadora-react.git
+git clone https://github.com/alessandroramos13/calculadora-react.git
 cd calculadora-react
 ```
 No Windows / Mac / Linux:
